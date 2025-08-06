@@ -78,25 +78,25 @@ export default function HeroSection() {
             className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm"
           >
             <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <p className="text-gray-800 italic">&quotPerfect Coffee Every Morning.&quot</p>
+              <p className="text-gray-800 italic">{"\"Perfect Coffee Every Morning.\""}</p>
             </div>
             <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <p className="text-gray-800 italic">&quotAmazingly Rich, Smooth Tasting Coffee.&quot</p>
+              <p className="text-gray-800 italic">{"\"Amazingly Rich, Smooth Tasting Coffee.\""}</p>
             </div>
             <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <p className="text-gray-800 italic">&quotThe Best Coffee Maker I Have Ever Encountered.&quot</p>
+              <p className="text-gray-800 italic">{"\"The Best Coffee Maker I Have Ever Encountered.\""}</p>
             </div>
           </motion.div>
         ) : (
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
             <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <p className="text-gray-800 italic">&quotPerfect Coffee Every Morning.&quot</p>
+              <p className="text-gray-800 italic">{"\"Perfect Coffee Every Morning.\""}</p>
             </div>
             <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <p className="text-gray-800 italic">&quotAmazingly Rich, Smooth Tasting Coffee.&quot</p>
+              <p className="text-gray-800 italic">{"\"Amazingly Rich, Smooth Tasting Coffee.\""}</p>
             </div>
             <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <p className="text-gray-800 italic">&quotThe Best Coffee Maker I Have Ever Encountered.&quot</p>
+              <p className="text-gray-800 italic">{"\"The Best Coffee Maker I Have Ever Encountered.\""}</p>
             </div>
           </div>
         )}
@@ -105,4 +105,5 @@ export default function HeroSection() {
   );
 
 }
+
 
