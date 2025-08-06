@@ -51,11 +51,10 @@ export default function HeroSection() {
           // Fallback static content khi chưa hydrate
           <div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-              Press for Better Coffee!
+              Grind Better. Brew Smarter.
             </h1>
             <p className="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto drop-shadow-md">
-              Experience the perfect brew with our patented 3-in-1 brewing technology. 
-              Rich, smooth, and delicious coffee in just 1 minute.
+              Unlock full flavor with the MHW‑3BOMBER Blade R3 – Precision-engineered burrs, 24 grind levels, and effortless control in one sleek manual grinder.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -78,25 +77,25 @@ export default function HeroSection() {
             className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm"
           >
             <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <p className="text-gray-800 italic">{"\"Perfect Coffee Every Morning.\""}</p>
+              <p className="text-gray-800 italic">{"\"Perfect grind every morning – smoother and sweeter!\""}</p>
             </div>
             <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <p className="text-gray-800 italic">{"\"Amazingly Rich, Smooth Tasting Coffee.\""}</p>
+              <p className="text-gray-800 italic">{"\"Top-notch quality at a budget price.\""}</p>
             </div>
             <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <p className="text-gray-800 italic">{"\"The Best Coffee Maker I Have Ever Encountered.\""}</p>
+              <p className="text-gray-800 italic">{"\"Premium build. Pro-level performance.\""}</p>
             </div>
           </motion.div>
         ) : (
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
             <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <p className="text-gray-800 italic">{"\"Perfect Coffee Every Morning.\""}</p>
+              <p className="text-gray-800 italic">{"\"Perfect grind every morning – smoother and sweeter!\""}</p>
             </div>
             <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <p className="text-gray-800 italic">{"\"Amazingly Rich, Smooth Tasting Coffee.\""}</p>
+              <p className="text-gray-800 italic">{"\"Top-notch quality at a budget price.\""}</p>
             </div>
             <div className="bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-              <p className="text-gray-800 italic">{"\"The Best Coffee Maker I Have Ever Encountered.\""}</p>
+              <p className="text-gray-800 italic">{"\"Premium build. Pro-level performance.\""}</p>
             </div>
           </div>
         )}
@@ -105,5 +104,6 @@ export default function HeroSection() {
   );
 
 }
+
 
 
