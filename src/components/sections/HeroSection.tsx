@@ -31,11 +31,10 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-              Press for Better Coffee!
+              Grind Better. Brew Smarter.
             </h1>
             <p className="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto drop-shadow-md">
-              Experience the perfect brew with our patented 3-in-1 brewing technology. 
-              Rich, smooth, and delicious coffee in just 1 minute.
+              Unlock full flavor with the MHW‑3BOMBER Blade R3 – Precision-engineered burrs, 24 grind levels, and effortless control in one sleek manual grinder.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -104,6 +103,7 @@ export default function HeroSection() {
   );
 
 }
+
 
 
 
