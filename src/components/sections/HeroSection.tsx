@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 // 1. Fix HeroSection.tsx - Thêm suppressHydrationWarning cho motion components
 'use client';
 
@@ -102,4 +103,5 @@ export default function HeroSection() {
       </div>
     </section>
   );
+
 }
