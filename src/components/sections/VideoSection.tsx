@@ -13,8 +13,8 @@ interface SimpleVideoSectionProps {
 
 export default function SimpleVideoSection({
   videoUrl = '/videos/aeropress-demo.mp4',
-  title = 'Perfect Coffee in 60 Seconds',
-  description = 'Watch how the AeroPress creates smooth, rich coffee with our patented brewing method',
+  title = 'Precision Grinding Starts Here',
+  description = 'Discover the build and mechanism behind the MHW‑3BOMBER Blade R3 grinder – stainless steel CNC burr, 24 grind settings, and easy-to-use design for every brew style.',
   autoPlay = true,
   loop = true,
   muted = true
@@ -90,16 +90,16 @@ export default function SimpleVideoSection({
             <div className="text-gray-600">Brewing Time</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-primary-600 mb-2">3-in-1</div>
-            <div className="text-gray-600">Technology</div>
+            <div className="text-3xl font-bold text-primary-600 mb-2">Stainless CNC Burr</div>
+            <div className="text-gray-600">Precision Engineering</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-primary-600 mb-2">0%</div>
-            <div className="text-gray-600">Bitterness</div>
+            <div className="text-3xl font-bold text-primary-600 mb-2">24 Levels</div>
+            <div className="text-gray-600">Adjustable Coarseness</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-primary-600 mb-2">100%</div>
-            <div className="text-gray-600">Satisfaction</div>
+            <div className="text-3xl font-bold text-primary-600 mb-2">100% Satisfaction</div>
+            <div className="text-gray-600">Real User Reviews</div>
           </div>
         </motion.div>
 
@@ -119,4 +119,5 @@ export default function SimpleVideoSection({
       </div>
     </section>
   );
+
 }
