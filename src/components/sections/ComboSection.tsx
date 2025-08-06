@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client';
 
 import { motion } from 'framer-motion';
@@ -170,4 +171,5 @@ export default function ComboSection() {
       <div className="absolute bottom-20 right-10 w-2 h-20 bg-gradient-to-t from-red-500 to-transparent rounded-full opacity-30"></div>
     </section>
   );
+
 }
