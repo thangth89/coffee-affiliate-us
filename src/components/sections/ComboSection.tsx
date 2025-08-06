@@ -152,7 +152,7 @@ export default function ComboSection() {
                 Start your perfect coffee journey
               </h3>
               <p className="text-red-100 mb-6 text-lg">
-                Don&apost just drink coffee, experience it in the most complete way
+                Don't just drink coffee, experience it in the most complete way
               </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -173,4 +173,5 @@ export default function ComboSection() {
   );
 
 }
+
 
