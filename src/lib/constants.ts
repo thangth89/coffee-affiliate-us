@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
 
 export const NAVIGATION_ITEMS = [
   { name: 'Products', href: '/products' },
-  { name: 'Brewing Guides', href: '/brewing-guides' },
+  { name: 'Blog', href: '/blog' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ] as const;
@@ -33,4 +33,5 @@ export const FEATURES = [
     description: 'Biodegradable filters for environmentally conscious brewing',
     icon: 'leaf',
   },
+
 ] as const;
