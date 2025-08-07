@@ -67,7 +67,7 @@ export default function FeaturesShowcaseSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="relative w-full min-h-screen flex items-center justify-center py-12 md:py-20"
+            className="relative w-full min-h-[50vh] md:min-h-[70vh] flex items-center justify-center py-6 md:py-12"
           >
             {/* Background gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-red-900/80 via-red-800/40 to-transparent"></div>
