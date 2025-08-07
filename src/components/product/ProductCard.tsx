@@ -8,6 +8,7 @@ export interface Product {
   description: string;
   price: string;
   reviews: number;
+  rating: number; // Thêm field rating (ví dụ: 4.5, 5, 4.2)
   image: string;
   isNew?: boolean;
   affiliateLink: string;
@@ -18,11 +19,14 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  // StarRating component inline
-  const StarRating = ({ reviews }: { reviews: number }) => (
-    <div className="flex items-center gap-2 mb-3">
-      <div className="flex gap-1">
-        {Array.from({ length: 5 }, (_, i) => (
+  // StarRating component với hỗ trợ nửa sao
+  const StarRating = ({ rating, reviews }: { rating: number; reviews: number }) => {
+    const stars = [];
+    
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        // Sao đầy
+        stars.push(
           <svg
             key={i}
             className="w-4 h-4 fill-red-500 text-red-500"
@@ -31,11 +35,55 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           >
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
           </svg>
-        ))}
+        );
+      } else if (i - 0.5 === rating) {
+        // Nửa sao
+        stars.push(
+          <div key={i} className="relative w-4 h-4">
+            {/* Sao trống làm nền */}
+            <svg
+              className="absolute w-4 h-4 fill-gray-300 text-gray-300"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            {/* Nửa sao đỏ */}
+            <svg
+              className="absolute w-4 h-4 fill-red-500 text-red-500"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style={{ clipPath: 'inset(0 50% 0 0)' }}
+            >
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+          </div>
+        );
+      } else {
+        // Sao trống
+        stars.push(
+          <svg
+            key={i}
+            className="w-4 h-4 fill-gray-300 text-gray-300"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+        );
+      }
+    }
+
+    return (
+      <div className="flex items-center gap-2 mb-3">
+        <div className="flex gap-1">
+          {stars}
+        </div>
+        <span className="text-gray-600 text-sm font-medium">{rating}</span>
+        <span className="text-gray-500 text-sm">({reviews})</span>
       </div>
-      <span className="text-gray-600 text-sm">{reviews}</span>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group relative">
@@ -63,7 +111,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       {/* Thông tin sản phẩm */}
       <div className="p-6">
         {/* Rating và số đánh giá */}
-        <StarRating reviews={product.reviews} />
+        <StarRating rating={product.rating} reviews={product.reviews} />
         
         {/* Tên sản phẩm */}
         <h3 className="text-xl font-bold text-gray-900 mb-2">
