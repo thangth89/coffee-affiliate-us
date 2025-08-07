@@ -8,9 +8,9 @@ export default function Home() {
     <div>
       <HeroSection />
       <VideoSection
-       autoPlay={true}
+       autoPlay={false}
        loop={true}
-       muted={true}
+       muted={false}
       />
       <FeaturesShowcaseSection />
       <ComboSection />
