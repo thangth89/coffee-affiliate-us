@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import ProductCard from '@/components/product/StarRating';
 
 export interface Product {
   id: number;
