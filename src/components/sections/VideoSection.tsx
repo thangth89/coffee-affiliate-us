@@ -13,8 +13,8 @@ interface SimpleVideoSectionProps {
 
 export default function SimpleVideoSection({
   videoUrl = '/videos/aeropress-demo.mp4',
-  title = 'Precision Grinding Starts Here',
-  description = 'Discover the build and mechanism behind the MHW‑3BOMBER Blade R3 grinder – stainless steel CNC burr, 24 grind settings, and easy-to-use design for every brew style.',
+  title = 'Perfect Coffee in 60 Seconds',
+  description = 'Watch how the AeroPress creates smooth, rich coffee with our patented brewing method',
   autoPlay = false,
   loop = true,
   muted = false
@@ -90,35 +90,31 @@ export default function SimpleVideoSection({
             <div className="text-gray-600">Brewing Time</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-primary-600 mb-2">Stainless CNC Burr</div>
-            <div className="text-gray-600">Precision Engineering</div>
+            <div className="text-3xl font-bold text-primary-600 mb-2">3-in-1</div>
+            <div className="text-gray-600">Technology</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-primary-600 mb-2">24 Levels</div>
-            <div className="text-gray-600">Adjustable Coarseness</div>
+            <div className="text-3xl font-bold text-primary-600 mb-2">0%</div>
+            <div className="text-gray-600">Bitterness</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-primary-600 mb-2">100% Satisfaction</div>
-            <div className="text-gray-600">Real User Reviews</div>
+            <div className="text-3xl font-bold text-primary-600 mb-2">100%</div>
+            <div className="text-gray-600">Satisfaction</div>
           </div>
         </motion.div>
 
-        {/* Muted Notice */}
-        {autoPlay && muted && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 0.5 }}
-            className="mt-8 text-center"
-          >
-            <p className="text-sm text-gray-500 bg-gray-100 inline-block px-4 py-2 rounded-full">
-              Video is muted for autoplay. Click to unmute and hear the brewing sounds.
-            </p>
-          </motion.div>
-        )}
+        {/* Play instruction */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="mt-8 text-center"
+        >
+          <p className="text-sm text-gray-500 bg-gray-100 inline-block px-4 py-2 rounded-full">
+            Nhấn play để xem video hướng dẫn pha cà phê
+          </p>
+        </motion.div>
       </div>
     </section>
   );
-
 }
-
