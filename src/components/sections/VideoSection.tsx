@@ -13,8 +13,8 @@ interface SimpleVideoSectionProps {
 
 export default function SimpleVideoSection({
   videoUrl = '/videos/aeropress-demo.mp4',
-  title = 'Perfect Coffee in 60 Seconds',
-  description = 'Watch how the AeroPress creates smooth, rich coffee with our patented brewing method',
+  title = 'Precision Grinding Starts Here',
+  description = 'Discover the build and mechanism behind the MHW‑3BOMBER Blade R3 grinder – stainless steel CNC burr, 24 grind settings, and easy-to-use design for every brew style.',
   autoPlay = false,
   loop = true,
   muted = false
@@ -87,19 +87,19 @@ export default function SimpleVideoSection({
         >
           <div>
             <div className="text-3xl font-bold text-primary-600 mb-2">1 min</div>
-            <div className="text-gray-600">Brewing Time</div>
+            <div className="text-gray-600">Grinding Time</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-primary-600 mb-2">3-in-1</div>
-            <div className="text-gray-600">Technology</div>
+            <div className="text-3xl font-bold text-primary-600 mb-2">Stainless CNC Burr</div>
+            <div className="text-gray-600">Precision Engineering</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-primary-600 mb-2">0%</div>
-            <div className="text-gray-600">Bitterness</div>
+            <div className="text-3xl font-bold text-primary-600 mb-2">24 Levels</div>
+            <div className="text-gray-600">Adjustable Coarseness</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-primary-600 mb-2">100%</div>
-            <div className="text-gray-600">Satisfaction</div>
+            <div className="text-3xl font-bold text-primary-600 mb-2">100% Satisfaction</div>
+            <div className="text-gray-600">Real User Reviews</div>
           </div>
         </motion.div>
 
@@ -111,10 +111,11 @@ export default function SimpleVideoSection({
           className="mt-8 text-center"
         >
           <p className="text-sm text-gray-500 bg-gray-100 inline-block px-4 py-2 rounded-full">
-            Nhấn play để xem video hướng dẫn pha cà phê
+            Press play to watch the video.
           </p>
         </motion.div>
       </div>
     </section>
   );
 }
+
