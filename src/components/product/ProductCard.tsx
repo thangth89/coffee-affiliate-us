@@ -1,8 +1,6 @@
-'use client';
-
+// src/components/product/ProductCard.tsx
 import React from 'react';
 import Image from 'next/image';
-import ProductCard from '@/components/product/StarRating';
 
 export interface Product {
   id: number;
@@ -20,6 +18,25 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  // StarRating component inline
+  const StarRating = ({ reviews }: { reviews: number }) => (
+    <div className="flex items-center gap-2 mb-3">
+      <div className="flex gap-1">
+        {Array.from({ length: 5 }, (_, i) => (
+          <svg
+            key={i}
+            className="w-4 h-4 fill-red-500 text-red-500"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+        ))}
+      </div>
+      <span className="text-gray-600 text-sm">{reviews}</span>
+    </div>
+  );
+
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group relative">
       {/* Badge "New" */}
@@ -39,7 +56,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           width={300}
           height={300}
           className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
-          priority={product.id <= 3} // Priority loading cho 3 sản phẩm đầu
+          priority={product.id <= 3}
         />
       </div>
       
