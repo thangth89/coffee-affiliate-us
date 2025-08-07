@@ -36,7 +36,7 @@ const ProductsPage = () => {
       description: "Clear Coffee Press",
       price: "49.95",
       reviews: 818,
-      rating: 4.5, // 4.5 sao (có nửa sao)
+      rating: 4.8, // 4.5 sao (có nửa sao)
       image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=400&fit=crop&crop=center",
       affiliateLink: "https://example.com/affiliate/clear-colors"
     },
@@ -92,6 +92,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
