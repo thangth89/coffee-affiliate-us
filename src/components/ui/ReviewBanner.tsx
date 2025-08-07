@@ -21,7 +21,7 @@ export default function ReviewBanner() {
           
           {/* Review Text */}
           <span className="text-sm md:text-base font-medium">
-            Hơn 65.000+ Five Star Reviews | 60 Countries
+            65.000+ Five Star Reviews | 60 Countries
           </span>
         </div>
       </div>
@@ -29,3 +29,4 @@ export default function ReviewBanner() {
   );
 
 }
+
