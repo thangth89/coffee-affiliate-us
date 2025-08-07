@@ -21,10 +21,11 @@ export default function ReviewBanner() {
           
           {/* Review Text */}
           <span className="text-sm md:text-base font-medium">
-            Hơn 65.000 Đánh Giá Năm Sao | 60 Quốc Gia
+            Hơn 65.000+ Five Star Reviews | 60 Countries
           </span>
         </div>
       </div>
     </div>
   );
+
 }
