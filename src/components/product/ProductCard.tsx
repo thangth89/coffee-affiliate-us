@@ -19,13 +19,15 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  // StarRating component với hỗ trợ nửa sao
+  // StarRating component với logic cải thiện
   const StarRating = ({ rating, reviews }: { rating: number; reviews: number }) => {
     const stars = [];
     
     for (let i = 1; i <= 5; i++) {
-      if (i <= rating) {
-        // Sao đầy
+      const difference = rating - (i - 1);
+      
+      if (difference >= 1) {
+        // Sao đầy (rating >= i)
         stars.push(
           <svg
             key={i}
@@ -36,8 +38,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
           </svg>
         );
-      } else if (i - 0.5 === rating) {
-        // Nửa sao
+      } else if (difference > 0) {
+        // Nửa sao hoặc sao một phần (0 < difference < 1)
+        const percentage = Math.round(difference * 100);
         stars.push(
           <div key={i} className="relative w-4 h-4">
             {/* Sao trống làm nền */}
@@ -48,19 +51,19 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             >
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
             </svg>
-            {/* Nửa sao đỏ */}
+            {/* Sao đỏ theo phần trăm */}
             <svg
               className="absolute w-4 h-4 fill-red-500 text-red-500"
               viewBox="0 0 24 24"
               fill="currentColor"
-              style={{ clipPath: 'inset(0 50% 0 0)' }}
+              style={{ clipPath: `inset(0 ${100 - percentage}% 0 0)` }}
             >
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
             </svg>
           </div>
         );
       } else {
-        // Sao trống
+        // Sao trống (difference <= 0)
         stars.push(
           <svg
             key={i}
