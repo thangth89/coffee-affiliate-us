@@ -45,7 +45,7 @@ const ProductsPage = () => {
       description: "Original 3 in 1 Brewer",
       price: "39.95",
       reviews: 993,
-      rating: 4.8, // Gần 5 sao
+      rating: 4.9, // Gần 5 sao
       image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=400&fit=crop&crop=center",
       affiliateLink: "https://example.com/affiliate/original"
     },
@@ -90,4 +90,5 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
