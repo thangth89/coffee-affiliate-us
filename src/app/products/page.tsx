@@ -1,6 +1,7 @@
 // src/app/products/page.tsx
 import React from 'react';
 import ProductCard from '@/components/product/ProductCard';
+import FeaturedProducts from '@/components/sections/FeaturedProducts';
 
 // Type definition cho sản phẩm
 export interface Product {
@@ -85,10 +86,12 @@ const ProductsPage = () => {
           ))}
         </div>
       </main>
+      <FeaturedProducts />
     </div>
   );
 };
 
 export default ProductsPage;
+
 
 
