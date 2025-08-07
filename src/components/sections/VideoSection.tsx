@@ -63,9 +63,9 @@ export default function SimpleVideoSection({
               </p>
             </video>
 
-            {/* Overlay with info */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <div className="absolute bottom-6 left-6 text-white">
+            {/* Overlay with info - không che controls */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+              <div className="absolute bottom-16 left-6 text-white pointer-events-none">
                 <h3 className="text-lg font-semibold mb-2">AeroPress Brewing Method</h3>
                 <p className="text-sm text-gray-200">Smooth, rich coffee in just 1 minute</p>
               </div>
