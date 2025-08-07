@@ -1,7 +1,7 @@
-// app/products/page.tsx
+// src/app/products/page.tsx
 import React from 'react';
 import ProductCard from '@/components/product/ProductCard';
-
+import Header from '@/components/Header';
 
 // Type definition cho sản phẩm
 export interface Product {
@@ -10,6 +10,7 @@ export interface Product {
   description: string;
   price: string;
   reviews: number;
+  rating: number; // Thêm field rating
   image: string;
   isNew?: boolean;
   affiliateLink: string;
@@ -24,6 +25,7 @@ const ProductsPage = () => {
       description: "Extra Large Coffee Press",
       price: "89.95",
       reviews: 22,
+      rating: 5, // 5 sao đầy
       image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop&crop=center",
       isNew: true,
       affiliateLink: "https://example.com/affiliate/clear-xl"
@@ -34,6 +36,7 @@ const ProductsPage = () => {
       description: "Clear Coffee Press",
       price: "49.95",
       reviews: 818,
+      rating: 4.5, // 4.5 sao (có nửa sao)
       image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=400&fit=crop&crop=center",
       affiliateLink: "https://example.com/affiliate/clear-colors"
     },
@@ -43,6 +46,7 @@ const ProductsPage = () => {
       description: "Original 3 in 1 Brewer",
       price: "39.95",
       reviews: 993,
+      rating: 4.8, // Gần 5 sao
       image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=400&fit=crop&crop=center",
       affiliateLink: "https://example.com/affiliate/original"
     },
@@ -52,6 +56,7 @@ const ProductsPage = () => {
       description: "Portable Coffee Maker",
       price: "69.95",
       reviews: 156,
+      rating: 4, // 4 sao đầy
       image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&h=400&fit=crop&crop=center",
       affiliateLink: "https://example.com/affiliate/go-plus"
     },
@@ -61,6 +66,7 @@ const ProductsPage = () => {
       description: "Complete Coffee Set",
       price: "129.95",
       reviews: 89,
+      rating: 4.3, // 4.3 sao
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=400&fit=crop&crop=center",
       isNew: true,
       affiliateLink: "https://example.com/affiliate/premium-kit"
