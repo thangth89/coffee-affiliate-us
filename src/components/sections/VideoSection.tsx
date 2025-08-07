@@ -15,9 +15,9 @@ export default function SimpleVideoSection({
   videoUrl = '/videos/aeropress-demo.mp4',
   title = 'Precision Grinding Starts Here',
   description = 'Discover the build and mechanism behind the MHW‑3BOMBER Blade R3 grinder – stainless steel CNC burr, 24 grind settings, and easy-to-use design for every brew style.',
-  autoPlay = true,
+  autoPlay = false,
   loop = true,
-  muted = true
+  muted = false
 }: SimpleVideoSectionProps) {
   return (
     <section className="py-20 px-4 bg-gray-50">
@@ -55,7 +55,7 @@ export default function SimpleVideoSection({
               playsInline
               preload="auto"
               poster="/images/video-thumbnail.jpg"
-              controls={!autoPlay}
+              controls={true}
             >
               <source src={videoUrl} type="video/mp4" />
               <p className="text-white p-8 text-center">
@@ -121,3 +121,4 @@ export default function SimpleVideoSection({
   );
 
 }
+
