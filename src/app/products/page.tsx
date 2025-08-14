@@ -26,9 +26,9 @@ const ProductsPage = () => {
       price: "89.95",
       reviews: 22,
       rating: 5, // 5 sao đầy
-      image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop&crop=center",
+      image: "images/products/mayxay.webp",
       isNew: true,
-      affiliateLink: "https://example.com/affiliate/clear-xl"
+      affiliateLink: "https://s.click.aliexpress.com/e/_oBKckkt"
     },
     {
       id: 2,
@@ -92,6 +92,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
