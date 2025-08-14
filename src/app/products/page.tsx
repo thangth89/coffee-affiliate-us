@@ -32,13 +32,13 @@ const ProductsPage = () => {
     },
     {
       id: 2,
-      name: "Clear & Colors",
-      description: "Clear Coffee Press",
-      price: "49.95",
+      name: "MHW-3BOMBER Pour Over Coffee Kits with Dripper Coffee Pot Coffee Grinder Scale Portable Handbag Outdoor Barista Christmas Gifts",
+      description: "8pcs Coffee Set",
+      price: "290.59",
       reviews: 818,
       rating: 4.8, // 4.5 sao (có nửa sao)
-      image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=400&fit=crop&crop=center",
-      affiliateLink: "https://example.com/affiliate/clear-colors"
+      image: "images/products/combo.webp",
+      affiliateLink: "https://s.click.aliexpress.com/e/_omQpIiV"
     },
     {
       id: 3,
@@ -92,6 +92,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
