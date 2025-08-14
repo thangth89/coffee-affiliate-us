@@ -129,15 +129,15 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         
         {/* Giá và nút mua */}
           <div className="flex items-center justify-between">
-            <div className="flex flex-col">
-            {product.originalPrice && (
-            <span className="text-sm text-gray-500 line-through">
-            ${product.originalPrice}
-            </span>
-            )}
+           <div className="flex items-center gap-3">
             <span className="text-2xl font-bold text-gray-900">
              ${product.price}
             </span>
+            {product.originalPrice && (
+            <span className="text-lg text-gray-500 line-through">
+            ${product.originalPrice}
+            </span>
+            )}
           </div>
           <a
             href={product.affiliateLink}
@@ -163,6 +163,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 };
 
 export default ProductCard;
+
 
 
 
