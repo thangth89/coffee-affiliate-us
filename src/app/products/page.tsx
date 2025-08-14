@@ -21,9 +21,9 @@ const ProductsPage = () => {
   const products: Product[] = [
     {
       id: 1,
-      name: "Clear XL",
-      description: "Extra Large Coffee Press",
-      price: "89.95",
+      name: "MHW-3BOMBER Manual Coffee Grinder Numerical External Setting Stainless Steel Conical Burr Fit Drip Coffee Espresso Barista Gifts",
+      description: "External Scale Adjustment:Offers precise external scale adjustment for versatile coffee brewing...",
+      price: "171.89",
       reviews: 22,
       rating: 5, // 5 sao đầy
       image: "images/products/mayxay.webp",
@@ -92,6 +92,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
