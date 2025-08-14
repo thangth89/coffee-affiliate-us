@@ -9,6 +9,7 @@ export interface Product {
   name: string;
   description: string;
   price: string;
+  originalPrice?: string;
   reviews: number | string;
   rating: number; // Thêm field rating
   image: string;
@@ -92,6 +93,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
