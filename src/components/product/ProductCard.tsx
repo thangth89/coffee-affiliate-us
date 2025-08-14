@@ -7,7 +7,7 @@ export interface Product {
   name: string;
   description: string;
   price: string;
-  reviews: string;
+  reviews: number | string;
   rating: number; // Thêm field rating (ví dụ: 4.5, 5, 4.2)
   image: string;
   isNew?: boolean;
@@ -20,7 +20,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   // StarRating component với logic cải thiện
-  const StarRating = ({ rating, reviews }: { rating: number; reviews: string }) => {
+  const StarRating = ({ rating, reviews }: { rating: number; reviews: number | string }) => {
     const stars = [];
     
     for (let i = 1; i <= 5; i++) {
@@ -156,6 +156,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 };
 
 export default ProductCard;
+
 
 
 
