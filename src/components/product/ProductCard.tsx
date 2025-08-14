@@ -20,7 +20,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   // StarRating component với logic cải thiện
-  const StarRating = ({ rating, reviews }: { rating: number; reviews: number }) => {
+  const StarRating = ({ rating, reviews }: { rating: number; reviews: string }) => {
     const stars = [];
     
     for (let i = 1; i <= 5; i++) {
@@ -156,6 +156,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 };
 
 export default ProductCard;
+
 
 
 
