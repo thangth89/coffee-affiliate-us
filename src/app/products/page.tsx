@@ -44,8 +44,8 @@ const ProductsPage = () => {
       id: 3,
       name: "MHW-3BOMBER Pour Over Coffee Kettle 400ml/600ml Stainless Steel Gooseneck Tea Water Pot Chic Cafe Barista Kitchen Accessories",
       description: "Coffee Kettle 400ml/600ml",
-      price: "39.95",
-      reviews: 993,
+      price: "40.79",
+      reviews: 2,000+ sold,
       rating: 4.9, // Gần 5 sao
       image: "images/products/amdun.webp",
       affiliateLink: "https://s.click.aliexpress.com/e/_ophqCTr"
@@ -92,6 +92,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
