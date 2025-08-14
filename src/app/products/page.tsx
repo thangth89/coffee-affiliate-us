@@ -25,7 +25,8 @@ const ProductsPage = () => {
       name: "MHW-3BOMBER Manual Coffee Grinder Numerical External Setting Stainless Steel Conical Burr Fit Drip Coffee Espresso Barista Gifts",
       description: "External Scale Adjustment:Offers precise external scale adjustment for versatile coffee brewing...",
       price: "171.89",
-      reviews: 22,
+      originalPrice: "176.89",
+      reviews: "3000+ sold",
       rating: 5, // 5 sao đầy
       image: "images/products/mayxay.webp",
       isNew: true,
@@ -36,7 +37,8 @@ const ProductsPage = () => {
       name: "MHW-3BOMBER Pour Over Coffee Kits with Dripper Coffee Pot Coffee Grinder Scale Portable Handbag Outdoor Barista Christmas Gifts",
       description: "8pcs Coffee Set",
       price: "290.59",
-      reviews: 818,
+      originalPrice: "593.04",
+      reviews: "10,000+ sold",
       rating: 4.8, // 4.5 sao (có nửa sao)
       image: "images/products/combo.webp",
       affiliateLink: "https://s.click.aliexpress.com/e/_omQpIiV"
@@ -45,8 +47,8 @@ const ProductsPage = () => {
       id: 3,
       name: "MHW-3BOMBER Pour Over Coffee Kettle 400ml/600ml Stainless Steel Gooseneck Tea Water Pot Chic Cafe Barista Kitchen Accessories",
       description: "Coffee Kettle 400ml/600ml",
-      price: "40.79",
-      originalPrice: "200.00",
+      price: "38.14",
+      originalPrice: "43.14",
       reviews: "2,000+ sold",
       rating: 4.9, // Gần 5 sao
       image: "images/products/amdun.webp",
@@ -94,6 +96,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
