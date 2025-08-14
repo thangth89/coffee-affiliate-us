@@ -134,7 +134,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
              ${product.price}
             </span>
             {product.originalPrice && (
-            <span className="text-lg text-gray-500 line-through">
+            <span className="text-sm text-gray-500 line-through">
             ${product.originalPrice}
             </span>
             )}
@@ -163,6 +163,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 };
 
 export default ProductCard;
+
 
 
 
