@@ -7,6 +7,7 @@ export interface Product {
   name: string;
   description: string;
   price: string;
+  originalPrice?: string;
   reviews: number | string;
   rating: number; // Thêm field rating (ví dụ: 4.5, 5, 4.2)
   image: string;
@@ -127,11 +128,17 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </p>
         
         {/* Giá và nút mua */}
-        <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-gray-900">
-            ${product.price}
-          </span>
-          
+          <div className="flex items-center justify-between">
+            <div className="flex flex-col">
+            {product.originalPrice && (
+            <span className="text-sm text-gray-500 line-through">
+            ${product.originalPrice}
+            </span>
+            )}
+            <span className="text-2xl font-bold text-gray-900">
+             ${product.price}
+            </span>
+          </div>
           <a
             href={product.affiliateLink}
             target="_blank"
@@ -156,6 +163,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 };
 
 export default ProductCard;
+
 
 
 
