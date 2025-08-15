@@ -67,14 +67,14 @@ const ProductsPage = () => {
     },
     {
       id: 5,
-      name: "Premium Kit",
-      description: "Complete Coffee Set",
-      price: "129.95",
-      reviews: 89,
+      name: "MHW-3BOMBER 500ml Coffee Server Glass Coffee Pot Espresso Dripper Pour Over Maker Brewer Pot Clear Chic Home Kitchen Accessories",
+      description: "Brand Guarantee: 30 Days Money Back,MHW-3BOMBER's 30-day money back ...",
+      price: "14.02",
+      originalPrice: "21.52",
+      reviews: "5,000+ slod",
       rating: 4.3, // 4.3 sao
-      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=400&fit=crop&crop=center",
-      isNew: true,
-      affiliateLink: "https://example.com/affiliate/premium-kit"
+      image: "images/products/cocdung.webp",
+      affiliateLink: "https://s.click.aliexpress.com/e/_ooMBlAN"
     }
   ];
 
@@ -97,6 +97,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
