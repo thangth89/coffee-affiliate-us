@@ -56,13 +56,14 @@ const ProductsPage = () => {
     },
     {
       id: 4,
-      name: "Go Plus",
-      description: "Portable Coffee Maker",
-      price: "69.95",
-      reviews: 156,
+      name: "MHW-3BOMBER Glass Coffee Filter Cups and Espresso Filter Paper Set Reusable Cone Pour Over Coffee Dripper Filters Accessorie",
+      description: "Glass Coffee Filter Cups and Espresso Filter Paper Set",
+      price: "25.14",
+      originalPrice: "51.30",
+      reviews: "4,000+ slod",
       rating: 4, // 4 sao đầy
-      image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&h=400&fit=crop&crop=center",
-      affiliateLink: "https://example.com/affiliate/go-plus"
+      image: "images/products/Cocloc.webp",
+      affiliateLink: "https://s.click.aliexpress.com/e/_omqrXI5"
     },
     {
       id: 5,
@@ -96,6 +97,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
