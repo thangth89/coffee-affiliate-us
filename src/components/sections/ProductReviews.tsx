@@ -3,7 +3,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
-import { Star, ChevronDown, ThumbsUp, MoreHorizontal } from 'lucide-react';
+import { Star, ThumbsUp, MoreHorizontal } from 'lucide-react';
 
 export interface ReviewData {
   id: number;
@@ -25,8 +25,7 @@ interface ProductReviewsProps {
 
 const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
   const [selectedRating, setSelectedRating] = useState('all');
-  const [sortBy, setSortBy] = useState('default');
-  const [showOriginalLanguage, setShowOriginalLanguage] = useState(false);
+  const [showWithImages, setShowWithImages] = useState(false);
 
   const filterOptions = useMemo(() => {
     const ratingCounts = reviews.reduce((acc, review) => {
@@ -51,17 +50,12 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
       filtered = filtered.filter(review => review.rating === parseInt(selectedRating));
     }
 
-    // Sort logic
-    if (sortBy === 'helpful') {
-      filtered = [...filtered].sort((a, b) => b.helpful - a.helpful);
-    } else if (sortBy === 'newest') {
-      filtered = [...filtered].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-    } else if (sortBy === 'oldest') {
-      filtered = [...filtered].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+    if (showWithImages) {
+      filtered = filtered.filter(review => review.images && review.images.length > 0);
     }
 
     return filtered;
-  }, [selectedRating, sortBy, reviews]);
+  }, [selectedRating, showWithImages, reviews]);
 
   const averageRating = useMemo(() => {
     if (reviews.length === 0) return '0.0';
@@ -124,41 +118,16 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
             </button>
           ))}
           
-          {/* Country filter */}
-          <button className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 flex items-center space-x-1">
-            <span className="w-4 h-3 bg-blue-600 text-white text-xs rounded flex items-center justify-center">US</span>
-            <span>({reviews.filter(r => r.country === 'US').length})</span>
-          </button>
-          
-          <button className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200">
-            📷 ({reviews.filter(r => r.images && r.images.length > 0).length})
-          </button>
-        </div>
-
-        {/* Sort Options */}
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <label className="text-sm text-gray-600">Sort by</label>
-            <div className="relative">
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="appearance-none bg-white border border-gray-300 rounded px-3 py-1.5 pr-8 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="default">default</option>
-                <option value="helpful">most helpful</option>
-                <option value="newest">newest</option>
-                <option value="oldest">oldest</option>
-              </select>
-              <ChevronDown className="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
-            </div>
-          </div>
-          
-          <button
-            onClick={() => setShowOriginalLanguage(!showOriginalLanguage)}
-            className="text-sm text-blue-600 hover:text-blue-800"
+          {/* Images filter */}
+          <button 
+            onClick={() => setShowWithImages(!showWithImages)}
+            className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
+              showWithImages
+                ? 'bg-blue-100 text-blue-700 border border-blue-300'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
           >
-            Show original language
+            📷 ({reviews.filter(r => r.images && r.images.length > 0).length})
           </button>
         </div>
       </div>
