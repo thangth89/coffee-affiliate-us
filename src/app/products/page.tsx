@@ -24,18 +24,6 @@ const ProductsPage = () => {
   const products: Product[] = [
     {
       id: 1,
-      name: "MHW-3BOMBER Manual Coffee Grinder Numerical External Setting Stainless Steel Conical Burr Fit Drip Coffee Espresso Barista Gifts",
-      description: "External Scale Adjustment:Offers precise external scale adjustment for versatile coffee brewing...",
-      price: "171.89",
-      originalPrice: "176.89",
-      reviews: "3000+ sold",
-      rating: 5, // 5 sao đầy
-      image: "images/products/mayxay.webp",
-      isNew: true,
-      affiliateLink: "https://s.click.aliexpress.com/e/_oBKckkt"
-    },
-    {
-      id: 2,
       name: "MHW-3BOMBER Pour Over Coffee Kits with Dripper Coffee Pot Coffee Grinder Scale Portable Handbag Outdoor Barista Christmas Gifts",
       description: "8pcs Coffee Set",
       price: "290.59",
@@ -45,6 +33,18 @@ const ProductsPage = () => {
       image: "images/products/combo.webp",
       isSale: true,
       affiliateLink: "https://s.click.aliexpress.com/e/_omQpIiV"
+    },
+    {
+      id: 2,
+      name: "MHW-3BOMBER Manual Coffee Grinder Numerical External Setting Stainless Steel Conical Burr Fit Drip Coffee Espresso Barista Gifts",
+      description: "External Scale Adjustment:Offers precise external scale adjustment for versatile coffee brewing...",
+      price: "171.89",
+      originalPrice: "176.89",
+      reviews: "3000+ sold",
+      rating: 5, // 5 sao đầy
+      image: "images/products/mayxay.webp",
+      isNew: true,
+      affiliateLink: "https://s.click.aliexpress.com/e/_oBKckkt"
     },
     {
       id: 3,
@@ -225,6 +225,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
