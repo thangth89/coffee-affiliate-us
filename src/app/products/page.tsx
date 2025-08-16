@@ -78,7 +78,109 @@ const ProductsPage = () => {
       affiliateLink: "https://s.click.aliexpress.com/e/_ooMBlAN"
     }
   ];
-
+// Sample reviews data cho phần cuối trang
+  const reviewsData = [
+    {
+      id: 1,
+      rating: 5,
+      title: "excellent favorite grinder",
+      content: "Wow, this grinder is amazing, you know? Seriously, its quality is absurd and the fit is perfect. I never want to suffer with those bad grinders again that always slow down. I highly recommend it for those looking for convenience and efficiency in the kitchen!",
+      author: "A***o",
+      date: "02 Jul 2025",
+      helpful: 5,
+      verified: true,
+      country: "US",
+      avatar: "https://via.placeholder.com/40x40/3B82F6/FFFFFF?text=A",
+      images: [
+        "https://via.placeholder.com/80x80/E5E7EB/6B7280?text=IMG1",
+        "https://via.placeholder.com/80x80/E5E7EB/6B7280?text=IMG2"
+      ]
+    },
+    {
+      id: 2,
+      rating: 5,
+      title: "",
+      content: "Excellent for express coffee. Fast grinding and consistent results.",
+      author: "W***",
+      date: "03 Apr 2025",
+      helpful: 3,
+      verified: true,
+      country: "US",
+      avatar: "https://via.placeholder.com/40x40/10B981/FFFFFF?text=W"
+    },
+    {
+      id: 3,
+      rating: 4,
+      title: "",
+      content: "Great product, fast delivery and good quality. Only issue is it's slightly noisy but overall satisfied with the purchase.",
+      author: "M***e",
+      date: "15 Mar 2025",
+      helpful: 2,
+      verified: true,
+      country: "US",
+      avatar: "https://via.placeholder.com/40x40/F59E0B/FFFFFF?text=M"
+    },
+    {
+      id: 4,
+      rating: 5,
+      title: "",
+      content: "Perfect grinder for home use. Consistent grind size and easy to clean.",
+      author: "J***n",
+      date: "28 Feb 2025",
+      helpful: 1,
+      verified: true,
+      country: "US",
+      avatar: "https://via.placeholder.com/40x40/EF4444/FFFFFF?text=J"
+    },
+    {
+      id: 5,
+      rating: 4,
+      title: "",
+      content: "Good quality product, works as expected. Delivery was fast.",
+      author: "S***h",
+      date: "20 Jan 2025",
+      helpful: 0,
+      verified: true,
+      country: "US",
+      avatar: "https://via.placeholder.com/40x40/8B5CF6/FFFFFF?text=S"
+    },
+    {
+      id: 6,
+      rating: 5,
+      title: "Amazing coffee set!",
+      content: "The complete coffee kit is perfect for outdoor camping. Everything you need is included and the quality is outstanding.",
+      author: "C***k",
+      date: "10 Jan 2025",
+      helpful: 4,
+      verified: true,
+      country: "US",
+      avatar: "https://via.placeholder.com/40x40/6366F1/FFFFFF?text=C"
+    },
+    {
+      id: 7,
+      rating: 4,
+      title: "",
+      content: "Good kettle, perfect pour control. Heats up quickly and looks elegant.",
+      author: "D***n",
+      date: "05 Jan 2025",
+      helpful: 2,
+      verified: true,
+      country: "US",
+      avatar: "https://via.placeholder.com/40x40/EC4899/FFFFFF?text=D"
+    },
+    {
+      id: 8,
+      rating: 5,
+      title: "",
+      content: "Filter cups work perfectly. Easy to clean and brew great coffee every time.",
+      author: "E***y",
+      date: "28 Dec 2024",
+      helpful: 1,
+      verified: true,
+      country: "US",
+      avatar: "https://via.placeholder.com/40x40/F59E0B/FFFFFF?text=E"
+    }
+  ];
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Products Grid */}
@@ -93,15 +195,22 @@ const ProductsPage = () => {
         </div>
       </main>
       <FeaturedProducts />
-      {/* Reviews Section */}
+     {/* Customer Reviews Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white rounded-lg shadow-sm p-6">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Customer Reviews</h2>
+            <p className="text-gray-600">See what our customers are saying about our coffee products</p>
+          </div>
           <ProductReviews reviews={reviewsData} />
         </div>
+      </section>
     </div>
   );
 };
 
 export default ProductsPage;
+
 
 
 
