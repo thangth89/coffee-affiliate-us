@@ -2,6 +2,7 @@
 import React from 'react';
 import ProductCard from '@/components/product/ProductCard';
 import FeaturedProducts from '@/components/sections/FeaturedProducts';
+import ProductReviews from '@/components/sections/ProductReviews';
 
 // Type definition cho sản phẩm
 export interface Product {
@@ -92,11 +93,16 @@ const ProductsPage = () => {
         </div>
       </main>
       <FeaturedProducts />
+      {/* Reviews Section */}
+        <div className="bg-white rounded-lg shadow-sm p-6">
+          <ProductReviews reviews={reviewsData} />
+        </div>
     </div>
   );
 };
 
 export default ProductsPage;
+
 
 
 
