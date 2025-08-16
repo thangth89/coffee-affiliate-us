@@ -194,7 +194,7 @@ const ProductsPage = () => {
           ))}
         </div>
       </main>
-      <FeaturedProducts />
+     {/* <FeaturedProducts /> // Thêm field rating */}
      {/* Customer Reviews Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white rounded-lg shadow-sm p-6">
@@ -210,6 +210,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
