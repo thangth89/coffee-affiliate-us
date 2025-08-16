@@ -84,29 +84,32 @@ const ProductsPage = () => {
       id: 1,
       rating: 5,
       title: "excellent favorite grinder",
-      content: "Wow, this grinder is amazing, you know? Seriously, its quality is absurd and the fit is perfect. I never want to suffer with those bad grinders again that always slow down. I highly recommend it for those looking for convenience and efficiency in the kitchen!",
+      content: "Excellent construction quality. I will still test",
       author: "A***o",
       date: "02 Jul 2025",
       helpful: 5,
       verified: true,
       country: "US",
-      avatar: "https://via.placeholder.com/40x40/3B82F6/FFFFFF?text=A",
-      images: [
-        "https://via.placeholder.com/80x80/E5E7EB/6B7280?text=IMG1",
-        "https://via.placeholder.com/80x80/E5E7EB/6B7280?text=IMG2"
-      ]
+      avatar: "images/avatars/avatarschung.webp",
+      images: "images/reviews/review1.webp",
     },
     {
       id: 2,
       rating: 5,
       title: "",
-      content: "Excellent for express coffee. Fast grinding and consistent results.",
+      content: "The product arrived quickly and well-packaged. Excellent quality. I have tested it and it is excellent.",
       author: "W***",
       date: "03 Apr 2025",
       helpful: 3,
       verified: true,
       country: "US",
-      avatar: "https://via.placeholder.com/40x40/10B981/FFFFFF?text=W"
+      avatar: "images/avatars/avatar2.webp",
+      images: [
+       "images/reviews/review2_1.webp",
+        "images/reviews/review2_2.webp",
+        "images/reviews/review2_3.webp",
+        "images/reviews/review2_4.webp",
+        ]
     },
     {
       id: 3,
@@ -210,6 +213,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
