@@ -91,7 +91,7 @@ const ProductsPage = () => {
       verified: true,
       country: "US",
       avatar: "images/avatars/avatarschung.webp",
-      images: "images/reviews/review1.webp",
+      images: ["images/reviews/review1.webp"],
     },
     {
       id: 2,
@@ -109,7 +109,7 @@ const ProductsPage = () => {
         "images/reviews/review2_2.webp",
         "images/reviews/review2_3.webp",
         "images/reviews/review2_4.webp",
-        ]
+        ],
     },
     {
       id: 3,
@@ -213,6 +213,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
