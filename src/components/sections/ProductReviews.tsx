@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import Image from 'next/image';
 import { Star, ChevronDown, ThumbsUp, MoreHorizontal } from 'lucide-react';
 
 export interface ReviewData {
@@ -63,7 +64,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
   }, [selectedRating, sortBy, reviews]);
 
   const averageRating = useMemo(() => {
-    if (reviews.length === 0) return 0;
+    if (reviews.length === 0) return '0.0';
     return (reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length).toFixed(1);
   }, [reviews]);
 
@@ -100,7 +101,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
           <h2 className="text-xl font-semibold text-gray-900">Reviews</h2>
           <span className="text-gray-500">|</span>
           <span className="text-xl font-bold text-gray-900">{averageRating}</span>
-          {renderStars(Math.floor(parseFloat(averageRating)))}
+          {renderStars(Math.floor(Number(averageRating)))}
           <span className="text-sm text-gray-500">{reviews.length} ratings</span>
           <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
             ✓ All from verified purchases
@@ -125,7 +126,13 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
           
           {/* Country filter */}
           <button className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 flex items-center space-x-1">
-            <img src="https://flagcdn.com/16x12/us.png" alt="US" className="w-4 h-3" />
+            <Image 
+              src="https://flagcdn.com/16x12/us.png" 
+              alt="US" 
+              width={16} 
+              height={12} 
+              className="w-4 h-3"
+            />
             <span>({reviews.filter(r => r.country === 'US').length})</span>
           </button>
           
@@ -168,11 +175,14 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
           <div key={review.id} className="border-b border-gray-100 pb-6 last:border-b-0">
             <div className="flex space-x-3">
               {/* Avatar */}
-              <img
-                src={review.avatar}
-                alt={review.author}
-                className="w-10 h-10 rounded-full flex-shrink-0"
-              />
+              <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                <Image
+                  src={review.avatar}
+                  alt={review.author}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               
               <div className="flex-1 min-w-0">
                 {/* Rating and Title */}
@@ -194,12 +204,14 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
                 {review.images && review.images.length > 0 && (
                   <div className="flex space-x-2 mb-3">
                     {review.images.map((image, index) => (
-                      <img
-                        key={index}
-                        src={image}
-                        alt={`Review image ${index + 1}`}
-                        className="w-16 h-16 rounded-lg object-cover cursor-pointer hover:opacity-80"
-                      />
+                      <div key={index} className="relative w-16 h-16 rounded-lg overflow-hidden cursor-pointer hover:opacity-80">
+                        <Image
+                          src={image}
+                          alt={`Review image ${index + 1}`}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     ))}
                   </div>
                 )}
