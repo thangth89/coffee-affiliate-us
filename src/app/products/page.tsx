@@ -162,7 +162,12 @@ const ProductsPage = () => {
       helpful: 4,
       verified: true,
       country: "US",
-      avatar: "https://via.placeholder.com/40x40/6366F1/FFFFFF?text=C"
+      avatar:"images/avatars/avatar6.webp",
+      images: [
+        "images/reviews/review6_1.webp",
+        "images/reviews/review6_2.webp",
+        "images/reviews/review6_3.webp",
+        ],
     },
     {
       id: 7,
@@ -218,6 +223,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
