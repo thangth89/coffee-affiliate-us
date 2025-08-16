@@ -12,6 +12,7 @@ export interface Product {
   rating: number; // Thêm field rating (ví dụ: 4.5, 5, 4.2)
   image: string;
   isNew?: boolean;
+  isSale?: boolean;
   affiliateLink: string;
 }
 
@@ -99,7 +100,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </span>
         </div>
       )}
-      
+      {/* Badge "Sale" */}
+      {product.isSale && (
+        <div className="absolute z-10 top-4 left-4">
+          <span className="bg-red-600 text-white px-3 py-1 text-sm font-semibold rounded">
+            Sale
+          </span>
+        </div>
+      )}
       {/* Hình ảnh sản phẩm */}
       <div className="relative bg-gray-50 p-8 h-80 flex items-center justify-center overflow-hidden">
         <Image
@@ -163,6 +171,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 };
 
 export default ProductCard;
+
 
 
 
