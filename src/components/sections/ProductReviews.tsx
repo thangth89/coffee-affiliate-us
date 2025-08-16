@@ -98,7 +98,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
       {/* Header */}
       <div className="border-b border-gray-200 pb-4 mb-6">
         <div className="flex items-center space-x-2 mb-3">
-          <h2 className="text-xl font-semibold text-gray-900">Reviews</h2>
+          <h3 className="text-xl font-semibold text-gray-900">Reviews</h3>
           <span className="text-gray-500">|</span>
           <span className="text-xl font-bold text-gray-900">{averageRating}</span>
           {renderStars(Math.floor(Number(averageRating)))}
@@ -126,13 +126,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
           
           {/* Country filter */}
           <button className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 flex items-center space-x-1">
-            <Image 
-              src="https://flagcdn.com/16x12/us.png" 
-              alt="US" 
-              width={16} 
-              height={12} 
-              className="w-4 h-3"
-            />
+            <span className="w-4 h-3 bg-blue-600 text-white text-xs rounded flex items-center justify-center">US</span>
             <span>({reviews.filter(r => r.country === 'US').length})</span>
           </button>
           
@@ -231,11 +225,11 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
                   </div>
                   
                   <div className="flex items-center space-x-2">
-                    <button className="flex items-center space-x-1 hover:text-gray-700">
+                    <button className="flex items-center space-x-1 hover:text-gray-700 transition-colors">
                       <ThumbsUp className="w-3 h-3" />
                       <span>Helpful ({review.helpful})</span>
                     </button>
-                    <button className="hover:text-gray-700">
+                    <button className="hover:text-gray-700 transition-colors">
                       <MoreHorizontal className="w-4 h-4" />
                     </button>
                   </div>
@@ -247,9 +241,9 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
       </div>
 
       {/* Load More Button */}
-      {filteredReviews.length < reviews.length && (
+      {filteredReviews.length >= 5 && (
         <div className="text-center mt-6">
-          <button className="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button className="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors">
             Load more reviews
           </button>
         </div>
