@@ -115,25 +115,26 @@ const ProductsPage = () => {
       id: 3,
       rating: 4,
       title: "",
-      content: "Great product, fast delivery and good quality. Only issue is it's slightly noisy but overall satisfied with the purchase.",
+      content: "Surprised with the grinder. Easy to use, good for ESPRESSO and good filters for fine grounds. A small bag for storing or carrying is missed. Grinding with it is not heavy at all.",
       author: "M***e",
       date: "15 Mar 2025",
       helpful: 2,
       verified: true,
       country: "US",
-      avatar: "https://via.placeholder.com/40x40/F59E0B/FFFFFF?text=M"
+      avatar: "images/avatars/avatarchung.webp",
     },
     {
       id: 4,
       rating: 5,
       title: "",
-      content: "Perfect grinder for home use. Consistent grind size and easy to clean.",
+      content: "Excellent excellent",
       author: "J***n",
       date: "28 Feb 2025",
       helpful: 1,
       verified: true,
       country: "US",
-      avatar: "https://via.placeholder.com/40x40/EF4444/FFFFFF?text=J"
+      avatar: "images/avatars/avatarchung.webp",
+      images: ["images/reviews/review4.webp"],
     },
     {
       id: 5,
@@ -213,6 +214,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
