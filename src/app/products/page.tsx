@@ -90,7 +90,7 @@ const ProductsPage = () => {
       helpful: 5,
       verified: true,
       country: "US",
-      avatar: "images/avatars/avatarschung.webp",
+      avatar: "images/avatars/avatarchung.webp",
       images: ["images/reviews/review1.webp"],
     },
     {
@@ -213,6 +213,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
