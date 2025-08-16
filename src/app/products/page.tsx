@@ -78,6 +78,17 @@ const ProductsPage = () => {
       rating: 4.3, // 4.3 sao
       image: "images/products/cocdung.webp",
       affiliateLink: "https://s.click.aliexpress.com/e/_ooMBlAN"
+    },
+    {
+      id: 6,
+      name: "MHW-3BOMBER Coffee Bean Storage Container 20-26g with Exhaust Valve Storage for Tea Coffee Home Barista Tool Espresso Coffeeware",
+      description: "10pcs Set",
+      price: "113.92",
+      originalPrice: "232.50",
+      reviews: "3,000+ slod",
+      rating: 4.6,
+      image: "images/products/ongdung.webp",
+      affiliateLink: "https://s.click.aliexpress.com/e/_oluQOyz"
     }
   ];
 // Sample reviews data cho phần cuối trang
@@ -225,6 +236,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
