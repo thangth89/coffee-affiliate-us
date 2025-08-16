@@ -113,7 +113,7 @@ const ProductsPage = () => {
     },
     {
       id: 3,
-      rating: 4,
+      rating: 4.5,
       title: "",
       content: "Surprised with the grinder. Easy to use, good for ESPRESSO and good filters for fine grounds. A small bag for storing or carrying is missed. Grinding with it is not heavy at all.",
       author: "M***e",
@@ -223,6 +223,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
