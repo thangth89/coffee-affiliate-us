@@ -140,14 +140,18 @@ const ProductsPage = () => {
       id: 5,
       rating: 4,
       title: "",
-      content: "Good quality product, works as expected. Delivery was fast.",
+      content: "Excellent grinder! Well worth its price",
       author: "S***h",
       date: "20 Jan 2025",
       helpful: 0,
       verified: true,
       country: "US",
-      avatar: "https://via.placeholder.com/40x40/8B5CF6/FFFFFF?text=S"
-    },
+      avatar: "images/avatars/avatar5.webp",
+      images: [
+        "images/reviews/review5_1.webp",
+        "images/reviews/review5_2.webp",
+        ],
+     },
     {
       id: 6,
       rating: 5,
@@ -214,6 +218,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
