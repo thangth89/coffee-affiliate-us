@@ -15,6 +15,7 @@ export interface Product {
   rating: number; // Thêm field rating
   image: string;
   isNew?: boolean;
+  isSale?: boolean;
   affiliateLink: string;
 }
 
@@ -42,6 +43,7 @@ const ProductsPage = () => {
       reviews: "10,000+ sold",
       rating: 4.8, // 4.5 sao (có nửa sao)
       image: "images/products/combo.webp",
+      isSale: true,
       affiliateLink: "https://s.click.aliexpress.com/e/_omQpIiV"
     },
     {
@@ -223,6 +225,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
