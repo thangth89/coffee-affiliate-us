@@ -171,7 +171,7 @@ const ProductsPage = () => {
     },
     {
       id: 7,
-      rating: 4,
+      rating: 4.5,
       title: "",
       content: "Good kettle, perfect pour control. Heats up quickly and looks elegant.",
       author: "D***n",
@@ -179,7 +179,7 @@ const ProductsPage = () => {
       helpful: 2,
       verified: true,
       country: "US",
-      avatar: "https://via.placeholder.com/40x40/EC4899/FFFFFF?text=D"
+      avatar: "images/avatars/avatarchung.webp"
     },
     {
       id: 8,
@@ -191,7 +191,7 @@ const ProductsPage = () => {
       helpful: 1,
       verified: true,
       country: "US",
-      avatar: "https://via.placeholder.com/40x40/F59E0B/FFFFFF?text=E"
+      avatar: "images/avatars/avatarchung.webp"
     }
   ];
   return (
@@ -223,6 +223,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
