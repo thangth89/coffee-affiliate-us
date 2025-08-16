@@ -107,7 +107,10 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
           {filterOptions.map((option) => (
             <button
               key={option.key}
-              onClick={() => setSelectedRating(option.key)}
+                onClick={() => {
+                 setSelectedRating(option.key);
+                 setShowWithImages(false); // reset lọc ảnh
+                }}
               className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
                 selectedRating === option.key
                   ? 'bg-blue-100 text-blue-700 border border-blue-300'
@@ -222,3 +225,4 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
 };
 
 export default ProductReviews;
+
