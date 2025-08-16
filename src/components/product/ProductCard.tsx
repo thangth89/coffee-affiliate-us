@@ -96,7 +96,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       {product.isNew && (
         <div className="absolute z-10 top-4 left-4">
           <span className="bg-red-600 text-white px-3 py-1 text-sm font-semibold rounded">
-            New
+            Hot
           </span>
         </div>
       )}
@@ -104,7 +104,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       {product.isSale && (
         <div className="absolute z-10 top-4 left-4">
           <span className="bg-red-600 text-white px-3 py-1 text-sm font-semibold rounded">
-            Sale
+            Sale off 50%
           </span>
         </div>
       )}
@@ -171,6 +171,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 };
 
 export default ProductCard;
+
 
 
 
