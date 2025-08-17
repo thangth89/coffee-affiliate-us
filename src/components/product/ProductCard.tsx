@@ -126,7 +126,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <StarRating rating={product.rating} reviews={product.reviews} />
         
         {/* Tên sản phẩm */}
-        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 line-clamp-2">
+        <h3 className="text-lg sm:text-lg font-bold text-gray-900 mb-2 line-clamp-2">
           {product.name}
         </h3>
         
@@ -171,6 +171,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 };
 
 export default ProductCard;
+
 
 
 
