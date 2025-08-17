@@ -147,7 +147,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </span>
     )}
   </div>
-  
+  <a
     href={product.affiliateLink}
     target="_blank"
     rel="noopener noreferrer"
@@ -171,6 +171,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 };
 
 export default ProductCard;
+
 
 
 
