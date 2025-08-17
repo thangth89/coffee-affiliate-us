@@ -8,29 +8,26 @@ export default function Footer() {
       <footer className="footer" role="contentinfo">
         <div className="footer-content">
           <div className="footer-column">
-            <h4>Về vay24h.pro.vn</h4>
+            <h4>About VeloraBrew</h4>
             <p>
-              vay24h.pro.vn là website tư vấn tài chính, cung cấp thông tin và đánh giá dịch vụ vay tiền online, mở thẻ tín dụng uy tín tại Việt Nam. Hoạt động từ 2025, chúng tôi giúp người dùng so sánh và chọn giải pháp tài chính phù hợp. Website không trực tiếp cho vay hay phát hành thẻ, mà giới thiệu đối tác đáng tin cậy.
+             At VeloraBrew, we believe that great coffee starts with great gear. Our mission is to help you discover high-quality, affordable coffee tools and accessories from around the world. We've handpicked a collection of the best products to help you brew the perfect cup, right in your own kitchen.
             </p>
           </div>
 
           <div className="footer-column">
-            <h4>Trang thông tin</h4>
-            <ul>
-              <li><Link href="/gioi-thieu">Giới thiệu vay24.pro.vn</Link></li>
-              <li><Link href="/dieu-khoan">Điều khoản sử dụng</Link></li>
-              <li><Link href="/chinh-sach">Chính sách bảo mật</Link></li>
-              <li><Link href="/lien-he">Liên hệ với chúng tôi</Link></li>
-            </ul>
+            <h4>Affiliate Disclosure</h4>
+            <p>
+             As an affiliate site, VeloraBrew earns a commission for purchases made through links on this page. We are a participant in the AliExpress Affiliate Program, designed to provide a means for us to earn fees by linking to AliExpress.com and affiliated sites. This does not affect the price you pay.
+            </p>
           </div>
 
           <div className="footer-column">
-            <h4>Mune</h4>
+            <h4>Quick Links</h4>
             <ul>
-              <li><Link href="/vay-tien-nhanh">Products</Link></li>
-              <li><Link href="/the-tin-dung">Blog</Link></li>
-              <li><Link href="/">About</Link></li>
-              <li><Link href="/tin-tuc">Contact</Link></li>
+              <li><Link href="/vay-tien-nhanh">About Us</Link></li>
+              <li><Link href="/the-tin-dung">Coffee Insights</Link></li>
+              <li><Link href="/">Privacy Policy</Link></li>
+              <li><Link href="/tin-tuc">Terms of Use</Link></li>
             </ul>
           </div>
         </div>
@@ -209,4 +206,5 @@ export default function Footer() {
       `}</style>
     </>
   );
+
 }
