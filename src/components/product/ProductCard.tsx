@@ -80,13 +80,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     }
 
     return (
-      <div className="flex items-center gap-2 mb-3">
-        <div className="flex gap-1">
-          {stars}
-        </div>
-        <span className="text-gray-600 text-sm font-medium">{rating}</span>
-        <span className="text-gray-500 text-sm">({reviews})</span>
-      </div>
+<div className="flex items-center gap-1 sm:gap-2 mb-2 sm:mb-3">
+  <div className="flex gap-0.5 sm:gap-1">
+    {stars}
+  </div>
+  <span className="text-gray-600 text-xs sm:text-sm font-medium">{rating}</span>
+  <span className="text-gray-500 text-xs sm:text-sm">({reviews})</span>
+</div>
     );
   };
 
@@ -109,7 +109,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
       )}
       {/* Hình ảnh sản phẩm */}
-      <div className="relative bg-gray-50 p-8 h-80 flex items-center justify-center overflow-hidden">
+      <div className="relative bg-gray-50 p-4 sm:p-8 h-60 sm:h-80 flex items-center justify-center overflow-hidden">
         <Image
           src={product.image}
           alt={product.name}
@@ -121,12 +121,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </div>
       
       {/* Thông tin sản phẩm */}
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         {/* Rating và số đánh giá */}
         <StarRating rating={product.rating} reviews={product.reviews} />
         
         {/* Tên sản phẩm */}
-        <h3 className="text-xl font-bold text-gray-900 mb-2">
+        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 line-clamp-2">
           {product.name}
         </h3>
         
@@ -136,41 +136,42 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </p>
         
         {/* Giá và nút mua */}
-          <div className="flex items-center justify-between">
-           <div className="flex items-baseline gap-3">
-            <span className="text-2xl font-bold text-gray-900">
-             ${product.price}
-            </span>
-            {product.originalPrice && (
-            <span className="text-sm text-gray-500 line-through">
-            ${product.originalPrice}
-            </span>
-            )}
-          </div>
-          <a
-            href={product.affiliateLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 transition-colors duration-300 shadow-lg hover:shadow-xl"
-          >
-            <svg 
-              className="w-4 h-4" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth={2}
-            >
-              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13v6a1 1 0 001 1h8a1 1 0 001-1v-6M9 19h2m4 0h2" />
-            </svg>
-            Mua Ngay
-          </a>
-        </div>
+<div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+  <div className="flex items-baseline gap-2 sm:gap-3">
+    <span className="text-xl sm:text-2xl font-bold text-gray-900">
+      ${product.price}
+    </span>
+    {product.originalPrice && (
+      <span className="text-xs sm:text-sm text-gray-500 line-through">
+        ${product.originalPrice}
+      </span>
+    )}
+  </div>
+  
+    href={product.affiliateLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-2 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base"
+  >
+    <svg 
+      className="w-4 h-4" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth={2}
+    >
+      <path d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13v6a1 1 0 001 1h8a1 1 0 001-1v-6M9 19h2m4 0h2" />
+    </svg>
+    Mua Ngay
+  </a>
+</div>
       </div>
     </div>
   );
 };
 
 export default ProductCard;
+
 
 
 
