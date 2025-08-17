@@ -24,10 +24,10 @@ export default function Footer() {
           <div className="footer-column">
             <h4>Quick Links</h4>
             <ul>
-              <li><Link href="/vay-tien-nhanh">About Us</Link></li>
-              <li><Link href="/the-tin-dung">Coffee Insights</Link></li>
+              <li><Link href="/products">Products</Link></li>
+              <li><Link href="/coffee-insights">Coffee Insights</Link></li>
               <li><Link href="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link href="/tin-tuc">Terms of Use</Link></li>
+              <li><Link href="/terms-of-use">Terms of Use</Link></li>
             </ul>
           </div>
         </div>
@@ -208,5 +208,6 @@ export default function Footer() {
   );
 
 }
+
 
 
