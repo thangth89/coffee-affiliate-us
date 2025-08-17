@@ -24,7 +24,7 @@ const ProductsPage = () => {
   const products: Product[] = [
     {
       id: 1,
-      name: "MHW-3BOMBER Pour Over Coffee Kits with Dripper Coffee Pot Coffee Grinder Scale Portable Handbag Outdoor Barista Christmas Gifts",
+      name: "Pour Over Coffee Kit with Dripper, Grinder, Scale & Bag Gift",
       description: "8pcs Coffee Set",
       price: "290.59",
       originalPrice: "593.04",
@@ -36,7 +36,7 @@ const ProductsPage = () => {
     },
     {
       id: 2,
-      name: "MHW-3BOMBER Manual Coffee Grinder Numerical External Setting Stainless Steel Conical Burr Fit Drip Coffee Espresso Barista Gifts",
+      name: "Manual Coffee Grinder Conical Burr Stainless Steel Espresso Maker",
       description: "External Scale Adjustment:Offers precise external scale adjustment for versatile coffee brewing...",
       price: "171.89",
       originalPrice: "176.89",
@@ -48,7 +48,7 @@ const ProductsPage = () => {
     },
     {
       id: 3,
-      name: "MHW-3BOMBER Pour Over Coffee Kettle 400ml/600ml Stainless Steel Gooseneck Tea Water Pot Chic Cafe Barista Kitchen Accessories",
+      name: "Pour Over Coffee Kettle Stainless Steel Gooseneck 400ml 600ml",
       description: "Coffee Kettle 400ml/600ml",
       price: "38.14",
       originalPrice: "43.14",
@@ -59,7 +59,7 @@ const ProductsPage = () => {
     },
     {
       id: 4,
-      name: "MHW-3BOMBER Glass Coffee Filter Cups and Espresso Filter Paper Set Reusable Cone Pour Over Coffee Dripper Filters Accessorie",
+      name: "Glass Coffee Filter Cup with Espresso Paper Set Reusable Dripper",
       description: "Glass Coffee Filter Cups and Espresso Filter Paper Set",
       price: "25.14",
       originalPrice: "51.30",
@@ -70,7 +70,7 @@ const ProductsPage = () => {
     },
     {
       id: 5,
-      name: "MHW-3BOMBER 500ml Coffee Server Glass Coffee Pot Espresso Dripper Pour Over Maker Brewer Pot Clear Chic Home Kitchen Accessories",
+      name: "500ml Glass Coffee Server Pot Espresso Dripper Pour Over Brewer",
       description: "Brand Guarantee: 30 Days Money Back,MHW-3BOMBER's 30-day money back ...",
       price: "14.02",
       originalPrice: "21.52",
@@ -81,7 +81,7 @@ const ProductsPage = () => {
     },
     {
       id: 6,
-      name: "MHW-3BOMBER Coffee Bean Storage Container 20-26g with Exhaust Valve Storage for Tea Coffee Home Barista Tool Espresso Coffeeware",
+      name: "Coffee Bean Storage Container 20-26g with Exhaust Valve Espresso",
       description: "10pcs Set",
       price: "113.92",
       originalPrice: "232.50",
@@ -236,6 +236,7 @@ const ProductsPage = () => {
 };
 
 export default ProductsPage;
+
 
 
 
