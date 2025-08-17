@@ -7,9 +7,8 @@ export const SITE_CONFIG = {
 
 export const NAVIGATION_ITEMS = [
   { name: 'Products', href: '/products' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Coffee Insights', href: '/coffee-insights' },
+  { name: 'Shipping & Returns', href: '/shipping-returns' },
 ] as const;
 
 export const FEATURES = [
@@ -35,3 +34,4 @@ export const FEATURES = [
   },
 
 ] as const;
+
