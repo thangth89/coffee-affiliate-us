@@ -37,7 +37,7 @@ export default function TermsOfUsePage() {
         <section className="mb-6">
           <h2 className="text-xl font-semibold mb-2">3. Limitation of Liability</h2>
           <p className="leading-relaxed">
-            The information and products on this Site are provided "as is" without any warranties of any kind. VeloraBrew is an affiliate site and does not sell or ship products directly. We are not responsible for any issues with the products you purchase, including shipping, quality, or returns. Any issues should be addressed with the third-party seller (AliExpress.com) directly.
+            The information and products on this Site are provided &quot;as is&quot; without any warranties of any kind. VeloraBrew is an affiliate site and does not sell or ship products directly. We are not responsible for any issues with the products you purchase, including shipping, quality, or returns. Any issues should be addressed with the third-party seller (AliExpress.com) directly.
           </p>
         </section>
 
