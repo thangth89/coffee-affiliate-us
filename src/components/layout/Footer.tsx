@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="footer-column">
             <h4>About VeloraBrew</h4>
             <p>
-             At VeloraBrew, we believe that great coffee starts with great gear. Our mission is to help you discover high-quality, affordable coffee tools and accessories from around the world. We've handpicked a collection of the best products to help you brew the perfect cup, right in your own kitchen.
+             At VeloraBrew, we believe that great coffee starts with great gear. Our mission is to help you discover high-quality, affordable coffee tools and accessories from around the world. We&apos;ve handpicked a collection of the best products to help you brew the perfect cup, right in your own kitchen.
             </p>
           </div>
 
@@ -208,3 +208,4 @@ export default function Footer() {
   );
 
 }
+
