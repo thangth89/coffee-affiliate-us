@@ -91,35 +91,38 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
     <div className="w-full">
       {/* Header */}
       <div className="border-b border-gray-200 pb-4 mb-6">
-        <div className="flex items-center space-x-2 mb-3">
-          <h3 className="text-xl font-semibold text-gray-900">Reviews</h3>
-          <span className="text-gray-500">|</span>
-          <span className="text-xl font-bold text-gray-900">{averageRating}</span>
-          {renderStars(Math.floor(Number(averageRating)))}
-          <span className="text-sm text-gray-500">{reviews.length} ratings</span>
-          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
-            ✓ All from verified purchases
-          </span>
-        </div>
+<div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-2 mb-3">
+  <h3 className="text-lg sm:text-2xl font-semibold text-gray-900">Reviews</h3>
+  <span className="hidden sm:inline text-gray-500">|</span>
+  <div className="flex items-center space-x-2">
+    <span className="text-lg sm:text-xl font-bold text-gray-900">{averageRating}</span>
+    {renderStars(Math.floor(Number(averageRating)))}
+    <span className="text-xs sm:text-sm text-gray-500">{reviews.length} ratings</span>
+  </div>
+  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+    ✓ All from verified purchases
+  </span>
+</div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap items-center gap-2 mb-4">
-          {filterOptions.map((option) => (
-            <button
-              key={option.key}
-                onClick={() => {
-                 setSelectedRating(option.key);
-                 setShowWithImages(false); // reset lọc ảnh
-                }}
-              className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                selectedRating === option.key
-                  ? 'bg-blue-100 text-blue-700 border border-blue-300'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              {option.label} ({option.count})
-            </button>
-          ))}
+<div className="flex flex-wrap items-center gap-1 sm:gap-2 mb-4">
+  {filterOptions.map((option) => (
+    <button
+      key={option.key}
+      onClick={() => {
+        setSelectedRating(option.key);
+        setShowWithImages(false);
+      }}
+      className={`px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium transition-colors ${
+        selectedRating === option.key
+          ? 'bg-blue-100 text-blue-700 border border-blue-300'
+          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+      }`}
+    >
+      <span className="hidden sm:inline">{option.label}</span>
+      <span className="sm:hidden">{option.label.split(' ')[0]}</span> ({option.count})
+    </button>
+  ))}
           
           {/* Images filter */}
           <button 
@@ -138,10 +141,10 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
       {/* Reviews List */}
       <div className="space-y-6">
         {filteredReviews.map((review) => (
-          <div key={review.id} className="border-b border-gray-100 pb-6 last:border-b-0">
-            <div className="flex space-x-3">
+         <div key={review.id} className="border-b border-gray-100 pb-4 sm:pb-6 last:border-b-0">
+            <div className="flex space-x-2 sm:space-x-3">
               {/* Avatar */}
-              <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+              <div className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden flex-shrink-0">
                 <Image
                   src={review.avatar}
                   alt={review.author}
@@ -225,4 +228,5 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ reviews }) => {
 };
 
 export default ProductReviews;
+
 
