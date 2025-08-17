@@ -26,7 +26,7 @@ export default function Footer() {
             <ul>
               <li><Link href="/vay-tien-nhanh">About Us</Link></li>
               <li><Link href="/the-tin-dung">Coffee Insights</Link></li>
-              <li><Link href="/">Privacy Policy</Link></li>
+              <li><Link href="/privacy-policy">Privacy Policy</Link></li>
               <li><Link href="/tin-tuc">Terms of Use</Link></li>
             </ul>
           </div>
@@ -208,4 +208,5 @@ export default function Footer() {
   );
 
 }
+
 
